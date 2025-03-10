@@ -12,6 +12,7 @@ alias lla "ll -A"
 alias g git
 command -qv nvim && alias vim nvim
 
+# reeplace ls with eza if available
 if type -q eza
     alias ll "eza -l -g --icons --header"
     alias lla "ll -a"
@@ -67,7 +68,7 @@ set -Ux fish_pager_color_completion 839395
 set -Ux fish_pager_color_description 576d74
 set -Ux fish_pager_color_selected_background --background=1a6397
 
-# FZF Color Theme
+# FZF Color Theme Solarized Dark
 set -Ux FZF_DEFAULT_OPTS "
   --highlight-line
   --info=inline-right
@@ -109,7 +110,9 @@ set -x TIG_CI true
 
 set CONFIG_FILE ~/.gitconfig
 
+# Copilot
 set -x OPENAI_API_KEY AIzaSyCMqk3mwvJt2CiuZvnwmoNVIS7JWHYZ668
 
+# trying to install ladybird 
 set -gx LDFLAGS -L/usr/local/opt/llvm/lib
 set -gx CPPFLAGS -I/usr/local/opt/llvm/include
