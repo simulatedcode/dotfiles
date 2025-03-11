@@ -8,4 +8,5 @@ Basic setup my dotfiles for Mbp 2017.
 - startship
 - bat with Solarized theme
 
+## Lazyvim
 
