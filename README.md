@@ -43,6 +43,10 @@ Ensure you have the following installed:
 - [bat](https://github.com/sharkdp/bat)
 - [stow](https://www.gnu.org/software/stow/) (optional, for managing symlinks)
 
+🙏 Acknowledgments
+
+Big thanks to Takuya for the amazing experience using terminal setups and inspiring this configuration!
+
 Feel free to use and modify these dotfiles. If you find them useful, a star on GitHub would be appreciated! ⭐
 
 
