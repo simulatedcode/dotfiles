@@ -26,7 +26,7 @@ starship init fish | source
 
 # FZF Configuration
 fzf_configure_bindings
-set -g FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :500"
+set -g FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :674"
 set -g FZF_LEGACY_KEYBINDINGS 0
 
 # Keybindings for FZF
@@ -84,6 +84,7 @@ set -Ux FZF_DEFAULT_OPTS "
 # Set BAT Theme
 set -Ux BAT_THEME "Solarized (dark)"
 
+# Set alias BAT
 function batp --wraps 'bat --theme=Solarized\ \(dark\) --style=plain' --description 'alias batp bat --theme=Solarized\ \(dark\) --style=plain'
     bat --theme=Solarized\ \(dark\) --style=plain $argv
 end
