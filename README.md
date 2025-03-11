@@ -1,4 +1,4 @@
-# My Dotfiles
+# My Personal Dotfiles
 
 This repository contains my personal dotfiles for setting up a customized development environment. Most of the configurations are inspired by [craftzdog's dotfiles](https://https://github.com/craftzdog/dotfiles-public), with some tweaks to fit my workflow.
 
@@ -45,9 +45,4 @@ Ensure you have the following installed:
 
 ## 🙏 Acknowledgments
 
-Big thanks to Takuya for the amazing experience using terminal setups and inspiring this configuration!
-
----
-Feel free to use and modify these dotfiles. If you find them useful, a star on GitHub would be appreciated! ⭐
-
-
+Big thanks to [Takuya Matsuyama](https://github.com/craftzdog) for the amazing experience and **Solarize Osaka using** terminal setups and inspiring this configuration!
