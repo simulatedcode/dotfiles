@@ -76,4 +76,4 @@ else
   vim.opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
 end
 
-vim.env.GEMINI_API_KEY = "AIzaSyCMqk3mwvJt2CiuZvnwmoNVIS7JWHYZ668"
+vim.env.GEMINI_API_KEY = "gemini"
