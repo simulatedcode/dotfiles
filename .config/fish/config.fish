@@ -4,12 +4,6 @@ set fish_greeting ""
 # Set terminal type
 set -gx TERM xterm-256color
 
-# Aliases
-alias ls "ls -p -G"
-alias la "ls -A"
-alias ll "ls -l"
-alias lla "ll -A"
-alias g git
 command -qv nvim && alias vim nvim
 
 # reeplace ls with eza if available
@@ -38,12 +32,6 @@ set -g FZF_LEGACY_KEYBINDINGS 0
 # Keybindings for FZF
 set -g FZF_CTRL_R_OPTS "--preview 'echo {}' --preview-window=down:3:hidden:wrap"
 set -g FZF_ALT_C_OPTS "--preview 'tree -C {} | head -200'"
-
-# Eza (Modern ls alternative)
-if type -q eza
-    alias ll "eza -l -g --icons"
-    alias lla "ll -a"
-end
 
 # Solarized Osaka Theme
 set -Ux fish_color_normal 839395
@@ -96,9 +84,9 @@ set -Ux FZF_DEFAULT_OPTS "
 # Set BAT Theme
 set -Ux BAT_THEME "Solarized (dark)"
 
-# Alias bat to use theme
-alias cat "bat --theme=Solarized (dark)"
-alias batp "bat --theme=Solarized (dark) --style=plain"
+function batp --wraps 'bat --theme=Solarized\ \(dark\) --style=plain' --description 'alias batp bat --theme=Solarized\ \(dark\) --style=plain'
+    bat --theme=Solarized\ \(dark\) --style=plain $argv
+end
 
 # Load Local Config if Exists
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
