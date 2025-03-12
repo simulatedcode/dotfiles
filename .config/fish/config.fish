@@ -10,9 +10,9 @@ command -qv nvim && alias vim nvim
 if type -q eza
     alias ll "eza -a"
     alias lla "eza -a -l -g --icons --header"
-    alias llg "eza -a -l -g --icons --header --git"
-    alias tree "eza --tree -a -l -g --icons --header --git-ignore"
-    alias treeg "eza --tree -a -l -g --icons --header --git --git-ignore"
+    alias lg "eza -a -l -g --icons --header --git"
+    alias lt "eza --tree -a -l -g --icons --header --git-ignore"
+    alias ltg "eza --tree -a -l -g --icons --header --git --git-ignore"
 end
 
 # Editor
