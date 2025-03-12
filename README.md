@@ -41,7 +41,8 @@ Ensure you have the following installed:
 - [Neovim](https://neovim.io/)
 - [tmux](https://github.com/tmux/tmux)
 - [bat](https://github.com/sharkdp/bat)
-- [stow](https://www.gnu.org/software/stow/) (optional, for managing symlinks)
+- tig (optional)
+- czgit (optional)
 
 ## 🙏 Acknowledgments
 
