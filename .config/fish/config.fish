@@ -4,9 +4,10 @@ set fish_greeting ""
 # Set terminal type
 set -gx TERM xterm-256color
 
+# Use Neovim if available
 command -qv nvim && alias vim nvim
 
-# replace ls with eza if available
+# Replace ls with eza if available
 if type -q eza
     alias ll "eza -a"
     alias lla "eza -a -l -g --icons --header"
@@ -15,16 +16,15 @@ if type -q eza
     alias ltg "eza --tree -a -l -g --icons --header --git --git-ignore"
 end
 
-# Editor
+# Set default editor
 set -gx EDITOR nvim
 
-# Add paths
+# Add custom paths
 fish_add_path ~/bin ~/.local/bin
-
-# Init starship prompt
-starship init fish | source
-
 set -gx PATH $HOME/.fzf/bin $PATH
+
+# Initialize Starship prompt
+starship init fish | source
 
 # FZF Configuration
 fzf_configure_bindings
@@ -35,7 +35,7 @@ set -g FZF_LEGACY_KEYBINDINGS 0
 set -g FZF_CTRL_R_OPTS "--preview 'echo {}' --preview-window=down:3:hidden:wrap"
 set -g FZF_ALT_C_OPTS "--preview 'tree -C {} | head -200'"
 
-# Solarized Osaka Theme
+# Solarized Osaka Theme Colors
 set -Ux fish_color_normal 839395
 set -Ux fish_color_command 29a298
 set -Ux fish_color_keyword d23681
@@ -58,7 +58,7 @@ set -Ux fish_pager_color_completion 839395
 set -Ux fish_pager_color_description 576d74
 set -Ux fish_pager_color_selected_background --background=1a6397
 
-# FZF Color Theme Solarized Dark
+# FZF Color Theme (Solarized Dark)
 set -Ux FZF_DEFAULT_OPTS "
   --highlight-line
   --info=inline-right
@@ -83,27 +83,27 @@ set -Ux FZF_DEFAULT_OPTS "
   --color=spinner:#c94c16
 "
 
-# Set BAT Theme
+# Set BAT theme
 set -Ux BAT_THEME "Solarized (dark)"
 
-# Set alias BAT
+# Define alias for BAT with Solarized theme
 function batp --wraps 'bat --theme=Solarized\ \(dark\) --style=plain' --description 'alias batp bat --theme=Solarized\ \(dark\) --style=plain'
     bat --theme=Solarized\ \(dark\) --style=plain $argv
 end
 
-# Load Local Config if Exists
+# Load local Fish configuration if it exists
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
     source $LOCAL_CONFIG
 end
 
+# Git-related settings
 set -x TIG_CI true
-
 set CONFIG_FILE ~/.gitconfig
 
-# Copilot
+# OpenAI Copilot API key (⚠️ Consider storing this securely!)
 set -x OPENAI_API_KEY AIzaSyCMqk3mwvJt2CiuZvnwmoNVIS7JWHYZ668
 
-# trying to install ladybird 
+# LLVM flags for installing Ladybird
 set -gx LDFLAGS -L/usr/local/opt/llvm/lib
 set -gx CPPFLAGS -I/usr/local/opt/llvm/include
