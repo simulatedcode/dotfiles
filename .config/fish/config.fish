@@ -6,19 +6,13 @@ set -gx TERM xterm-256color
 
 command -qv nvim && alias vim nvim
 
-# reeplace ls with eza if available
+# replace ls with eza if available
 if type -q eza
     alias ll "eza -a"
     alias lla "eza -a -l -g --icons --header"
-<<<<<<< HEAD
     alias lg "eza -a -l -g --icons --header --git"
     alias lt "eza --tree -a -l -g --icons --header --git-ignore"
     alias ltg "eza --tree -a -l -g --icons --header --git --git-ignore"
-=======
-    alias llg "eza -a -l -g --icons --header --git"
-    alias tree "eza --tree -a -l -g --icons --header --git-ignore"
-    alias treeg "eza --tree -a -l -g --icons --header --git --git-ignore"
->>>>>>> main
 end
 
 # Editor
@@ -29,6 +23,8 @@ fish_add_path ~/bin ~/.local/bin
 
 # Init starship prompt
 starship init fish | source
+
+set -gx PATH $HOME/.fzf/bin $PATH
 
 # FZF Configuration
 fzf_configure_bindings
